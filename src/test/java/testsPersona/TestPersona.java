@@ -1,4 +1,4 @@
-package personaJUnit;
+package testsPersona;
 
 import static org.junit.Assert.*;
 
@@ -14,19 +14,6 @@ import main.Main;
 import persona.Persona;
 
 public class TestPersona {
-
-	@Test
-	public void connectionException() throws myExceptions {
-		Connection conexionC = null;
-		Conexion connection;
-		try {
-			connection = new Conexion(conexionC);
-		} catch (SQLException e) {
-			myExceptions exception = new myExceptions(1);
-			exception.getMessage();
-			e.printStackTrace();
-		}
-	}
 	
 	@Test
 	public void dniException() throws myExceptions{
@@ -43,5 +30,5 @@ public class TestPersona {
 	    		return false;
     	}
 	    	return false;
-    } 
+    }
 }
