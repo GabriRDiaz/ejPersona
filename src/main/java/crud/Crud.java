@@ -29,11 +29,10 @@ public class Crud {
 			ps.setInt(3, persona.getEdad());
 			ps.setString(4, persona.getDni());
 			ps.executeUpdate();
-			} catch (SQLException e) {
-				System.out.println("ERROR");
-				e.printStackTrace();
-			}
 			actualizadoExito();
+			} catch (SQLException e) {
+				System.out.println("ERROR: "+ e.getMessage());
+			}
 		}
 	
 	public void delPersona(String dni){
